@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Board from '../components/Board';
+import Provider from '../context/context';
+import './Home.css';
 
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <Provider>
+      <Board />
+    </Provider>
+  );
 }
