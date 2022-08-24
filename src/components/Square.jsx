@@ -8,10 +8,12 @@ export default function Square({ value, index }) {
     setSquares,
     isXNext,
     setIsXNext,
+    winner,
   } = useContext(AppContext);
 
   const handleClick = () => {
     if (squares[index]) return;
+    if (winner) return;
 
     const newSquares = [...squares];
     newSquares[index] = isXNext ? 'X' : 'O';

@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/context';
 
-export default function Board() {
+export default function Player() {
   const { isXNext } = useContext(AppContext);
   return (
-    <div>Board</div>
+    <h1>
+      Player:
+      {isXNext ? 'X' : 'O'}
+    </h1>
   );
 }
