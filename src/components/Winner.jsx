@@ -4,11 +4,12 @@ import { AppContext } from '../context/context';
 export default function Winner() {
   const { winner } = useContext(AppContext);
 
+  if (!winner) return <div />;
   return (
-    <div>
-      {
-      winner && <p>{winner}</p>
-      }
-    </div>
+    <p className="winner">
+      {winner}
+      {' '}
+      ganhou!!!
+    </p>
   );
 }

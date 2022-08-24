@@ -7,7 +7,7 @@ export const AppContext = createContext();
 export default function Provider({ children }) {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isXNext, setIsXNext] = useState(true);
-  const [winner, setWinner] = useState();
+  const [winner, setWinner] = useState('');
 
   const state = {
     squares,

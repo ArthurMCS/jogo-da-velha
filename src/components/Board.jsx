@@ -17,7 +17,7 @@ export default function Board() {
     if (winner) {
       setWinner(winner);
     }
-  }, [squares]);
+  }, [setWinner, squares]);
 
   return (
     <div className="board-container">
